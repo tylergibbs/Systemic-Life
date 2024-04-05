@@ -1,0 +1,9 @@
+echo "start"
+pgrep -x "python run.py"
+if ps ax | grep '/home/crewmana/bin/python3.5 /home/crewmana/system2.5/run.py' | grep -v 'grep'
+then
+    echo "then"
+else
+    echo "else"
+    /home/crewmana/bin/python3.5 ~/system2.5/run.py & 
+fi
